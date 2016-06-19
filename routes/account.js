@@ -1,10 +1,10 @@
-
+﻿
 
 var users=[
     {username:'admin',password:'123'},
-    {username:'test1',password:'123'},
-    {username:'test2',password:'123'},
-    {username:'test3',password:'123'}
+    {username:'user1',password:'123'},
+    {username:'user2',password:'123'},
+    {username:'user3',password:'123'}
 ]
 
 exports.regist =function(req,res,next){
