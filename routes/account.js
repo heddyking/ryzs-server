@@ -10,7 +10,7 @@ var users=[
 exports.regist =function(req,res,next){
     var username=req.query.username;
     var password=req.query.password;
-
+console.log('regist'+username);
     if(!username || !password){
         res.send({status:false, msg:"注册信息不全"});
         return;
@@ -30,6 +30,7 @@ exports.regist =function(req,res,next){
 exports.login = function(req,res,next){
     var username=req.query.username;
     var password=req.query.password;
+    console.log('login:'+username);
     for(var k=0;k<users.length;k++){
         if(users[k].username==username && users[k].password==password){
             res.send({status:true, msg:"登录成功"})
