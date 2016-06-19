@@ -6,7 +6,19 @@ var obj=[
 ]
 
 exports.getQuestions = function (req, res, next) {
-    res.send(obj);
+    var username=req.query.username;
+    if(!username)
+        res.send(obj);
+    else{
+        var result=[];
+        for(var k=0;k<obj.length;k++){
+            if(obj[k].username==username){
+                result.push(obj[k]);
+            }
+        }
+        res.send(result);
+    }
+
 };
 
 exports.getQuestion = function(req, res, next){
